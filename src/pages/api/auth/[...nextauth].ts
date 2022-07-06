@@ -13,6 +13,7 @@ export default NextAuth({
             authorization: { params: { scope: 'read:user' } }
         }),
     ],
+    secret: process.env.JWT_SECRET,
     callbacks: {
         async session({ session }) {
 
